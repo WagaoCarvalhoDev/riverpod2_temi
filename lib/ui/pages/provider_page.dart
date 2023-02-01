@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final provider = Provider<String>((ref) => 'Provider');
 
 class ProviderPage extends StatelessWidget {
   const ProviderPage({Key? key, required this.color}) : super(key: key);
@@ -12,7 +15,13 @@ class ProviderPage extends StatelessWidget {
         title: const Text('Provider'),
         backgroundColor: color,
       ),
-      body: const Center(child: Text('Provider')),
+      body: Consumer(
+        builder: (context, ref, child) => Center(
+          child: Text(
+            ref.watch(provider),
+          ),
+        ),
+      ),
     );
   }
 }
