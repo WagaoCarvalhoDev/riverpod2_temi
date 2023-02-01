@@ -19,6 +19,7 @@ class ProviderPage extends StatelessWidget {
         builder: (context, ref, child) => Center(
           child: Text(
             ref.watch(provider),
+            style: const TextStyle(fontSize: 40),
           ),
         ),
       ),

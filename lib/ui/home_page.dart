@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('RiverPod Explorer'),
       ),
       body: Center(
@@ -22,13 +23,12 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ButtonWidget(
-              color: Colors.red,
+              color: Colors.redAccent,
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProviderPage(
-                        color: Theme.of(context).colorScheme.primary),
+                    builder: (context) => ProviderPage(color: Colors.redAccent),
                   ),
                 );
               },
@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             ButtonWidget(
-              color: Colors.red,
+              color: Colors.redAccent,
               onPressed: () {
                 Navigator.push(
                   context,
@@ -76,7 +76,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             ButtonWidget(
-              color: Colors.red,
+              color: Colors.redAccent,
               onPressed: () {
                 Navigator.push(
                   context,

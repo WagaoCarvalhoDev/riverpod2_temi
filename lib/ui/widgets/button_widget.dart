@@ -6,10 +6,12 @@ class ButtonWidget extends StatelessWidget {
     required this.onPressed,
     required this.text,
     this.color,
+    this.fontSize,
   });
 
   final VoidCallback onPressed;
   final String text;
+  final double? fontSize;
   final Color? color;
 
   @override
@@ -28,7 +30,7 @@ class ButtonWidget extends StatelessWidget {
             ),
           ),
           onPressed: onPressed,
-          child: Text(text),
+          child: Text(text, style: TextStyle(fontSize: fontSize)),
         ),
       ),
     );
