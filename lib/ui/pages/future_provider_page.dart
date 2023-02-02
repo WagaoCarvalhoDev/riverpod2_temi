@@ -32,7 +32,7 @@ class FutureProviderPage extends ConsumerWidget {
             data: (data) => Text(data.activity),
             error: (error, stackTrace) =>
                 Text('$error.toString()\n $stackTrace.toString()'),
-            loading: () => const CircularProgressIndicator(),
+            loading: () => const Center(child: CircularProgressIndicator()),
           ),
         ]),
       ),
